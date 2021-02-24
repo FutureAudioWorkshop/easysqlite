@@ -225,6 +225,36 @@ Record* Table::getRecordByKeyId(integer keyId)
 	return NULL;
 }
 
+Record* Table::getRecordByIdentifer(string fieldId, string keyId)
+{
+    const string queryStr = "select * from " + _tableName + " where " + fieldId + " = '" + quoteStr(keyId) + "'";
+    
+    if (_recordset.query(queryStr))
+    {
+        if (_recordset.count() > 0)
+        {
+            return _recordset.getRecord(0);
+        }
+    }
+    
+    return NULL;
+}
+   
+
+bool Table::updateField(int idx, string field, string oldValue, string newValue)
+{
+    const string queryStr = "update " + _tableName + " set " + field + " = replace(" + field + ", '" + oldValue +"', '" + newValue + "') where _ID = " + intToStr(idx);
+        
+    RecordSet rs(_db, _recordset.fields());
+    
+    if (rs.query(queryStr))
+    {
+        return true;
+    }
+    
+    return false;
+}
+
 bool Table::addRecord(Record* record)
 {
 	if (record)

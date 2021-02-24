@@ -8,20 +8,20 @@
 #ifndef EASYSQLITE_H_
 #define EASYSQLITE_H_
 
-#include "easySQLite/SqlCommon.h"
-#include "easySQLite/SqlField.h"
-#include "easySQLite/SqlDatabase.h"
-#include "easySQLite/SqlTable.h"
-#include "easySQLite/SqlDatabase.h"
-#include "easySQLite/SqlField.h"
-#include "easySQLite/SHA1.h"
-#include "easySQLite/sqlite3.h"
-#include "easySQLite/SqlRecord.h"
-#include "easySQLite/SqlTable.h"
-#include "easySQLite/SqlCommon.h"
-#include "easySQLite/SqlValue.h"
-#include "easySQLite/SqlFieldSet.h"
-#include "easySQLite/SqlRecordSet.h"
+#include "SqlCommon.h"
+#include "SqlField.h"
+#include "SqlDatabase.h"
+#include "SqlTable.h"
+#include "SqlDatabase.h"
+#include "SqlField.h"
+#include "SHA1.h"
+#include "sqlite3.h"
+#include "SqlRecord.h"
+#include "SqlTable.h"
+#include "SqlCommon.h"
+#include "SqlValue.h"
+#include "SqlFieldSet.h"
+#include "SqlRecordSet.h"
 
 using namespace sql;
 

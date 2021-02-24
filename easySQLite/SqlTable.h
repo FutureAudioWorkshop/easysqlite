@@ -52,8 +52,10 @@ public:
 	Record* getRecord(int record_index);
 	Record* getTopRecord();
 	Record* getRecordByKeyId(integer keyId);
+    Record* getRecordByIdentifer(string fieldId, string keyId);
 
 public:
+    bool updateField(int idx, string field, string oldValue, string newValue);
 	bool addRecord(Record* record);
 	bool updateRecord(Record* record);
 	bool deleteRecords(string whereCondition);

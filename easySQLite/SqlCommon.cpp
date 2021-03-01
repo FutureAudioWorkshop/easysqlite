@@ -159,9 +159,15 @@ string binToHex(const char* buffer, int size)
 string generateSHA(string& value)
 {
 	CSHA1 sha;
-
+#ifdef __clang__
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wshorten-64-to-32"
+#endif
 	sha.Update((UINT_8*)value.c_str(), value.length());
-
+#ifdef __clang__
+    #pragma clang diagnostic pop
+#endif
+    
 	sha.Final();
 
 	UINT_8 digest[20];

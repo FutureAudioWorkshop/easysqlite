@@ -49,4 +49,4 @@ public:
 
 
 //sql eof
-};
+}

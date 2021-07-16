@@ -76,4 +76,4 @@ public:
 
 
 //sql eof
-};
+}

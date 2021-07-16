@@ -103,7 +103,7 @@ public:
 	Exception(string msg)
 		: _msg(msg)
 	{
-	};
+	}
 	string msg()
 	{
 		return _msg;
@@ -156,4 +156,6 @@ void listToVector(string s, std::vector<string>& vector, const char* sep = ",");
 
 
 //sql eof
-};
+}
+
+
